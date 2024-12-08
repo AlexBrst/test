@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>1</id>
+        <name>Ноутбук ASUS</name>
+        <price>315000</price>
+        <category>Ноутбуки</category>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Смартфон Samsung</name>
+        <price>190000</price>
+        <category>Смартфоны</category>
+    </product>
+    <product>
+        <id>3</id>
+        <name>Телевизор LG</name>
+        <price>250000</price>
+        <category>Телевизоры</category>
+    </product>
+    <product>
+        <id>4</id>
+        <name>Ноутбук Lenovo</name>
+        <price>280000</price>
+        <category>Ноутбуки</category>
+    </product>
+    <product>
+        <id>5</id>
+        <name>Смартфон iPhone</name>
+        <price>600000</price>
+        <category>Смартфоны</category>
+    </product>
+</products>

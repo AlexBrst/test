@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-магазин техники</title>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Подключение jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <!-- Подключение Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<section id="app">
+    <h1>Первоначальный заголовок</h1>
+    <h2>Каталог товаров</h2>
+
+    <button @click="sortTable('asc')">Сортировать по возрастанию цены</button>
+    <button @click="sortTable('desc')">Сортировать по убыванию цены</button>
+    <button @click="addProduct">Добавить товар</button>
+    <button id="delete-product">Удалить выделенный товар</button>
+    <button id="toggle-table">Показать/скрыть таблицу</button>
+    <button id="title">Сменить заголовок</button>
+    <label for="date">Выберите дату:</label>
+    <input type="text" id="date">
+
+    <table v-show="isTableVisible" id="product-table"> 
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Цена (тг)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="product in products" :key="product.name">   <!---Рендеринг списков-->
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Условный рендеринг-->
+    <p v-if="!products.length">Нет товаров в каталоге.</p>  
+</section>
+
+    <script src="script/jquery.js"></script>
+    <script src="script/vue.js"></script>
+</body>
+</html>
